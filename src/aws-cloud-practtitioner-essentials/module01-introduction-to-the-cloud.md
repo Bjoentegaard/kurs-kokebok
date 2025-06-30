@@ -2,8 +2,8 @@
 
 ## INTRODUCTION
 
-- Objective:
-  - Describe the client-server model at a fundamental level.
+- _Objective:_
+  - _Describe the client-server model at a fundamental level._
 
 > Q: Which scenario BEST describes how the client-server model works in coffee-shop analogy?
 > 
@@ -13,16 +13,16 @@
 
 ### What is Cloud Computing?
 
-- Objective:
-  - Define cloud computing
-  - Describe and differentiate between cloud deployment types
+- _Objective:_
+  - _Define cloud computing_
+  - _Describe and differentiate between cloud deployment types__
 
-On-demand delivery of IT resources over the internet with pay-as-you-go pricing
+>On-demand delivery of IT resources over the internet with pay-as-you-go pricing
 
-- **Cloud deployment types**
-    - Cloud-based deployment
-    - On-premises deployment
-    - Hybrid deployment
+**Cloud deployment types:**
+  - Cloud-based deployment
+  - On-premises deployment
+  - Hybrid deployment
 
 > Q: Which deployment model balances compliance (on-premises) and scalability (cloud)?
 > 
@@ -30,8 +30,8 @@ On-demand delivery of IT resources over the internet with pay-as-you-go pricing
 
 ### Benefits of the AWS Cloud
 
-- Objective:
-  - Describe the six benefits of cloud computing
+- _Objective:_
+  - _Describe the six benefits of cloud computing_
 
 The six key benefits of the AWS Cloud are as follows:
 
@@ -50,15 +50,17 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### Introduction to the AWS Global Infrastructure
 
-- Objective
-  - Define AWS Regions and Availability Zones (AZ)
-  - Explain the benefits of high availability and fault tolerance
+- _Objective:_
+  - _Define AWS Regions and Availability Zones (AZ)_
+  - _Explain the benefits of high availability and fault tolerance_
+
 
 - AWS Regions
   - Physical locations around the world that contain groups of data centers.
   - These groups of data centers are called Availability Zones
   - Each AWS Region consists of a minimum of three physically separate AZ within a geographic area.
-- Availability Zone consists of one or more data centers with redundant power, networking, and connectivity.
+- Availability Zone
+  - consists of one or more data centers with redundant power, networking, and connectivity.
   - Regions and AZ are designed to provide low-latency, fault-tolerant access to services for users within a given area.
 
 > Q: How does AWS Global Infrastructure ensure high availability?
@@ -67,9 +69,9 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### The AWS Shared Responsibility Model
 
-- Objective:
-  - Describe and differentiate between customer responsibilities, AWS responsibilities, and shared responsibilities.
-  - Describe the components of the AWS Shared Responsibility Model
+- _Objective:_
+  - _Describe and differentiate between customer responsibilities, AWS responsibilities, and shared responsibilities._
+  - _Describe the components of the AWS Shared Responsibility Model_
 
 
 - **Customer responsibilities** (Security _IN_ the cloud)
@@ -93,8 +95,8 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### Applying Cloud Concepts to Real Life Use Cases
 
-- Objective:
-  - Explain how fundamentals cloud concepts, such as the AWS Global Infrastructure and AWS Shared Responsibility Model, work together to form real-world business solutions.
+- _Objective:_
+  - _Explain how fundamentals cloud concepts, such as the AWS Global Infrastructure and AWS Shared Responsibility Model, work together to form real-world business solutions._
 
 >**EXAMPLE**
 >- An ecommerce company in Seattle, Washington seeks to expand globally. Greater distance from customers increases latency.
