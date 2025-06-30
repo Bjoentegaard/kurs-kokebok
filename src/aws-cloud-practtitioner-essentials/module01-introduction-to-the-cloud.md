@@ -2,8 +2,8 @@
 
 ## INTRODUCTION
 
-- _Objective:_
-  - _Describe the client-server model at a fundamental level._
+- Objective:
+  - Describe the client-server model at a fundamental level.
 
 > Q: Which scenario BEST describes how the client-server model works in coffee-shop analogy?
 > 
@@ -13,9 +13,9 @@
 
 ### What is Cloud Computing?
 
-- _Objective:_
-  - _Define cloud computing_
-  - _Describe and differentiate between cloud deployment types__
+- Objective:
+  - Define cloud computing
+  - Describe and differentiate between cloud deployment types
 
 >On-demand delivery of IT resources over the internet with pay-as-you-go pricing
 
@@ -30,8 +30,8 @@
 
 ### Benefits of the AWS Cloud
 
-- _Objective:_
-  - _Describe the six benefits of cloud computing_
+- Objective:
+  - Describe the six benefits of cloud computing
 
 The six key benefits of the AWS Cloud are as follows:
 
@@ -50,10 +50,9 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### Introduction to the AWS Global Infrastructure
 
-- _Objective:_
-  - _Define AWS Regions and Availability Zones (AZ)_
-  - _Explain the benefits of high availability and fault tolerance_
-
+- Objective:
+  - Define AWS Regions and Availability Zones (AZ)
+  - Explain the benefits of high availability and fault tolerance
 
 - AWS Regions
   - Physical locations around the world that contain groups of data centers.
@@ -69,9 +68,9 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### The AWS Shared Responsibility Model
 
-- _Objective:_
-  - _Describe and differentiate between customer responsibilities, AWS responsibilities, and shared responsibilities._
-  - _Describe the components of the AWS Shared Responsibility Model_
+- Objective:
+  - Describe and differentiate between customer responsibilities, AWS responsibilities, and shared responsibilities.
+  - Describe the components of the AWS Shared Responsibility Model
 
 
 - **Customer responsibilities** (Security _IN_ the cloud)
@@ -95,8 +94,8 @@ The six key benefits of the AWS Cloud are as follows:
 
 ### Applying Cloud Concepts to Real Life Use Cases
 
-- _Objective:_
-  - _Explain how fundamentals cloud concepts, such as the AWS Global Infrastructure and AWS Shared Responsibility Model, work together to form real-world business solutions._
+- Objective:
+  - Explain how fundamentals cloud concepts, such as the AWS Global Infrastructure and AWS Shared Responsibility Model, work together to form real-world business solutions.
 
 >**EXAMPLE**
 >- An ecommerce company in Seattle, Washington seeks to expand globally. Greater distance from customers increases latency.
