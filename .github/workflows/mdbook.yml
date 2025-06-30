@@ -41,7 +41,7 @@ jobs:
         run: mdbook build
 
       - name: Write version to book
-        run: echo "${VERSION}" > book/version.txt
+        run: echo "${VERSION}" > README.md
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
