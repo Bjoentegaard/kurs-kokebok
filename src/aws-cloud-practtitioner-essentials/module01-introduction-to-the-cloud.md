@@ -4,6 +4,7 @@
 
 _Objective:_
 - Describe the client-server model at a fundamental level.
+---
 
 > Q: Which scenario BEST describes how the client-server model works in coffee-shop analogy?
 > 
@@ -16,6 +17,7 @@ _Objective:_
 _Objective:_
 - Define cloud computing
 - Describe and differentiate between cloud deployment types
+---
 
 >On-demand delivery of IT resources over the internet with pay-as-you-go pricing
 
@@ -32,6 +34,7 @@ _Objective:_
 
 _Objective:_
 - Describe the six benefits of cloud computing
+---
 
 The six key benefits of the AWS Cloud are as follows:
 
@@ -53,6 +56,7 @@ The six key benefits of the AWS Cloud are as follows:
 _Objective:_
 - Define AWS Regions and Availability Zones (AZ)
 - Explain the benefits of high availability and fault tolerance
+---
 
 **AWS Regions**
   - Physical locations around the world that contain groups of data centers.
@@ -72,19 +76,21 @@ _Objective:_
 _Objective_:
 - Describe and differentiate between customer responsibilities, AWS responsibilities, and shared responsibilities.
 - Describe the components of the AWS Shared Responsibility Model
+---
 
+**Customer responsibilities** (Security _IN_ the cloud)
+- Customer data
+- Client-side data encryption
 
-- **Customer responsibilities** (Security _IN_ the cloud)
-  - Customer data
-  - Client-side data encryption
-- **Shared responsibilities** (Varies by service)
-  - Server-side encryption
-  - Network traffic protection
-  - Platform and application management
-  - OS, network, firewall configuration
-- **AWS responsibilities** (Security _OF_ the cloud)
-  - Software for compute, storage, database, and networking
-  - Hardware, AWS Global Infrastructure
+**Shared responsibilities** (Varies by service)
+- Server-side encryption
+- Network traffic protection
+- Platform and application management
+- OS, network, firewall configuration
+
+**AWS responsibilities** (Security _OF_ the cloud)
+- Software for compute, storage, database, and networking
+- Hardware, AWS Global Infrastructure
 
 > Q: Which party is responsible for applying security patches to the OS that is running in the cloud?
 >
@@ -97,6 +103,7 @@ _Objective_:
 
 - _Objective_:
   - Explain how fundamentals cloud concepts, such as the AWS Global Infrastructure and AWS Shared Responsibility Model, work together to form real-world business solutions.
+---
 
 >**EXAMPLE**
 >- An ecommerce company in Seattle, Washington seeks to expand globally. Greater distance from customers increases latency.
