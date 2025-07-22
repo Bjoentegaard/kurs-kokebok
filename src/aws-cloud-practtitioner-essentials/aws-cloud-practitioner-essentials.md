@@ -71,6 +71,47 @@
 - `Amazon Simple Queue Service (Amazon SQS)` - A message queuing service that facilitates reliable communication between software components.
   - It can send, store, and receive messages at any scale, making sure messages are not lost and that other services don't need to be available for processing
 - `Payload` - Data contained within a message
-- `Amazon SQS queues` - Where messages are placed until they are processed
+- `SQS queues` - Where messages are placed until they are processed
 - `Amazon Simple Notification Service (Amazon SNS)` - A publish-subscribe service that publishers use to send messages to subscribers through SNS topics.
-- `Amazon SNS topic` - A channel for messages to be delivered
+- `SNS topic` - A channel for messages to be delivered
+
+## Module 3 - Exploring Compute Service
+- `Unmanaged services` - (EX: EC2) AWS takes care of the underlying physical infrastructure, but you're responsible for setting up, securing, and maintaining the operating system, network configurations, and applications on your instances.
+- `Managed services` - Managed services, on the other hand, reduce the amount of infrastructure you need to manage.
+- `Fully-managed services` - like serverless ones—take abstraction even further, eliminating the need to provision or manage any servers at all.
+- `Serveless` - You cannot see or access the underlaying infrastructure
+- `Lambda` - a serverless compute service that runs code in response to events without the need to provision or manage servers
+  - Maximum duration is 15 minutes
+- `How Lambda works`
+  - Upload code to Lambda
+  - Set code to trigger from an event source 
+  - Run code when triggered 
+  - Pay only for the compute time used 
+- `Containers` - provide a reliable way to package your application’s code and dependencies into a single, portable unit, making them ideal for workflows that require high security, reliability, and scalability.
+  - Faster and lighter than virtual machines (VMs) because they share the host computer’s operating system.
+- `VMs` use a hypervisor to run full, separate operating systems, which makes them less resource-efficient and have longer startup times.
+- `Amazon Elastic Container Service (ECS)` - Scalable container orchestration service for running and managing containers on AWS, like Docker containers.
+  - Streamlined and integrated
+  - Define some parameters
+  - Fully managed service
+- `Amazon Elastic Kubernetes Service (EKS)` - A fully managed service for running Kubernetes on AWS. It simplifies deploying, managing, and scaling containerized applications using open-source Kubernetes.
+  - Open source platform
+  - More complex
+  - More control and flexibility
+- `Amazon Elastic Container Registry (ECR)` - is where you can store, manage, and deploy container images. It supports container images that follow the Open Container Initiative (OCI) standards.
+  - Fully managed Docker registry
+  - Stores container images
+- `AWS Fargate` - a serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS. 
+  - Fargate is a container hosting platform, unlike Amazon ECS and Amazon EKS, which are both container orchestration services.
+- `AWS Elastic Beanstalk` - A fully managed service that streamlines the deployment, management, and scaling of web applications.
+  - Developers can upload their code, and Elastic Beanstalk automatically handles the provisioning of infrastructure, scaling, load balancing, and application health monitoring.
+  - _Good for_: Deploying and managing web applications, RESTful APIs, mobile backend services, and microservices architectures, with automated scaling and simplified infrastructure management
+- `AWS Batch` - A fully managed service that you can use to run batch computing workloads on AWS.
+  - It automatically schedules, manages, and scales compute resources for batch jobs, optimizing resource allocation based on job requirements.
+  - _Good for_: Processing large-scale, parallel workloads in areas like scientific computing, financial risk analysis, media transcoding, big data processing, machine learning training, and genomics research
+- `Amazon Lightsail` - A cloud service offering virtual private servers (VPSs), storage, databases, and networking at a predictable monthly price.
+  - It’s ideal for small businesses, basic workloads, and developers seeking a straightforward AWS experience without the complexity of the full AWS Management Console.
+  - _Good for_: Basic web applications, low-traffic websites, development and testing environments, small business websites, blogs, and learning cloud services
+- `AWS Outposts Family`- a fully managed hybrid cloud solution that extends AWS infrastructure and services to on-premises data centers.
+  - It provides a consistent experience between on premises and the AWS Cloud, offering compute, storage, and networking components.
+  - _Good for_: Low-latency applications, data processing in remote locations, migrating and modernizing legacy applications, and meeting regulatory compliance or data residency requirements
