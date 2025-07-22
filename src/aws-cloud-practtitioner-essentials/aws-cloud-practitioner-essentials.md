@@ -1,0 +1,76 @@
+# AWS Cloud Practitioner Essentials
+[AWS Cloud Practitioner Essentials](https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7?parentId=Y4YASRJEVX)
+
+## Module 1 - Intorduction to the cloud
+- `Cloud Computing` - On-demand delivery of IT resources over the internet with a Pay-as-you-go pricing
+- `Cloud-based deployment:` Resources and applications are hosted entirely in the cloud and accessed over the internet.
+- `On-premises deployment:` Resources and infrastructure are hosted and managed locally within the organization's data center.
+- `Hybrid deployment`: A combination of on-premises and cloud environments, offering balance between control and scalability.
+- `Six key benefits of cloud computing`
+  - Trade fixed expense for variable expense
+  - Benefit from massive economies of scale
+  - Stop guessing capacity
+  - Increase speed and agility
+  - Stop spending money to run and maintain data centers
+- `AWS Regions` - Physical locations around the world that contain groups (AZ) of data centers (Min 3)
+- `Availability Zones (AZ)` - Consists of one or more data centers with redundant power, networking, and connectivity
+- `Customer responsibilites` - Security IN the cloud (applications, data, access control)
+- `Shared responsibilites` - Varies by service
+- `AWS Responsibilities` - Security OF the cloud (hardware, infrastructure)
+
+## Module 2 - Compute in the cloud
+- `Compute in the cloud` - Compute in the cloud means creating virtual machines with a cloud provider to run applications and tasks over the internet
+- `Elastic Compute Cloud (EC2)` - Virtual Server/Machine in the AWS Cloud that provides on-demand, scalable computing capacity
+- `EC2 Instances types`
+  - General purpose - Balanced resources 
+  - Compute optimized - Compute intensive tasks
+  - Memory optimized - Provide fast performance for memory-heavy workloads
+  - Accelerated computing - Uses HW acceleators to efficiently handle tasks
+  - Storage optimized - Designed for workloads that require high performance for lacally stored data
+- `AWS Management Console` - Web interface for managing AWS services
+- `AWS Command Line Interface (CLI)` - Managing multiple AWS services directly from the command line.
+- `AWS Software Development Kit (SDK)` - Simplifies integrating AWS services into your applications by providing APIs for various programming languages.
+- `Amazon Machine Images (AMI)` - AMIs are pre-built VM that have the basic components for what is needed to start an instance.
+  - It provides a consistent image to launch new instances.
+  - With an _unmanaged_ service like EC2, you are responsible for configuring and managing security.
+- `EC2 Pricing`
+  - On-Demand Instances - Pay only for the compute capacity you consume with no upfront payment or long-term commitments required.
+  - Reserved Instances - Get a saving of up to 75 percent by committing to a 1-year or 3-year term for predictable workloads using specific instance families and AWS Regions
+  - Spot Instances - Bid on a spare compute capacity at up to 90 percent of the On-demand price, with the flexibility to be interrupted when AWS reclaims the instance
+  - Savings Plans - Save up to 72 percent across a variety of instance types and services by commiting to a consistent usage level for 1 or 3 year.
+  - Dedicated Hosts - Reserve an entire physical server for your exclusive use. This option offers full control and is ideal for workloads with strict security or licensing needs
+  - Dedicated Instances - Pay for instances running on HW dedicated solely to your account. This option provides isolation from other AWS customers.
+- `Cost optimization`
+  - Saving Plans - Good for Predictable workloads
+  - Capacity Reservation - Good for Critical workloads with strict capacity requirements
+  - Reserved Instance flexibility - Good gor Steady-state workloads with predictable usage
+- `Scalability` - Adding Resources
+  - Scaling Up (Vertical) - Adding more power to existing machines
+  - Scaling Out (Horizontal) - Adding more machines
+- `Elasticity` - Abilitiy to automatically scale resources up or down in response to real-time demand
+- `EC2 Auto Scaling` - automatically adjusts the number of EC2 instances based on changes in application demand, providing better availability. It offers two approaches. 
+  - Dynamic scaling adjusts in real time to fluctuations in demand. 
+  - Predictive scaling preemptively schedules the right number of instances based on anticipated demand.
+- `Auto Scaling Group` - Configured with three key settings (**min, desired and max** capacity)
+  -   - A load balancer serves as the single point of contact for all incoming web traffic to an Auto Scaling group.
+- `Elastic Load Balancing (ELB)` - automatically distributes incoming application traffic across multiple resources, such as EC2 instances, to optimize performance and reliability.
+  - Regional application
+- `ELB Benefits`
+  - Efficient traffic distribution - ELB evenly distributes traffic across EC2 instances, preventing overload on any single instance and optimizing resource utilization.
+  - Automatic Scaling - ELB scales with traffic and automatically adjusts to changes in demand for a seamless operation as backend instances are added or removed.
+  - Simplified management - ELB decouples front-end and backend tiers and reduces manual synchronization. It also handles maintenance, updates, and failover to ease operational overhead.
+- `ELB Routing Methods`
+  - Round Robin - Distributes traffic evenly across all available servers in a cyclic manner.
+  - Least Connections - Routes traffic to the server with the fewest active connections, maintaining a balanced load.
+  - Ip Hash - Uses the client’s IP address to consistently route traffic to the same server.
+  - Least Response Time - Directs traffic to the server with the fastest response time, minimizing latency.
+- `Monolitich Applications` - Applications consist of multiple components that work together to transmit data, fulfill requests, and keep the application running smoothly.
+- `Microservices Applications` - Application components are loosely coupled. The communication between components remains intact, and the failure of a single component does not impact the entire system.
+- `EventBridge` - A serverless service that helps connect different parts of an application using events, helping to build scalable, event-driven systems. 
+  - With EventBridge, you route events from sources like custom apps, AWS services, and third-party software to other applications. 
+- `Amazon Simple Queue Service (Amazon SQS)` - A message queuing service that facilitates reliable communication between software components.
+  - It can send, store, and receive messages at any scale, making sure messages are not lost and that other services don't need to be available for processing
+- `Payload` - Data contained within a message
+- `Amazon SQS queues` - Where messages are placed until they are processed
+- `Amazon Simple Notification Service (Amazon SNS)` - A publish-subscribe service that publishers use to send messages to subscribers through SNS topics.
+- `Amazon SNS topic` - A channel for messages to be delivered
