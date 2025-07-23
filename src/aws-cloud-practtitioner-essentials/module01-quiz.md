@@ -46,9 +46,7 @@
 
 > Q: A cloud architect explains the customer's responsibilities under the AWS Shared Responsibility Model. What responsibilities does the customer have in this model?
 >
-> A: 
->   - Managing OS patches 
->   - Encrypting client-side data.
+> A: Managing OS patches / Encrypting client-side data.
 
 ---
 

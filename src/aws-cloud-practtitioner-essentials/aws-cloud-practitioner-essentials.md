@@ -1,7 +1,7 @@
 # AWS Cloud Practitioner Essentials
 [AWS Cloud Practitioner Essentials](https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7?parentId=Y4YASRJEVX)
 
-## Module 1 - Intorduction to the cloud
+## Module 1 - Introduction to the cloud
 - `Cloud Computing` - On-demand delivery of IT resources over the internet with a Pay-as-you-go pricing
 - `Cloud-based deployment:` Resources and applications are hosted entirely in the cloud and accessed over the internet.
 - `On-premises deployment:` Resources and infrastructure are hosted and managed locally within the organization's data center.
@@ -98,7 +98,7 @@
   - Open source platform
   - More complex
   - More control and flexibility
-- `Amazon Elastic Container Registry (ECR)` - is where you can store, manage, and deploy container images. It supports container images that follow the Open Container Initiative (OCI) standards.
+- `Amazon Elastic Container Registry (ECR)` - Where you can store, manage, and deploy container images. It supports container images that follow the Open Container Initiative (OCI) standards.
   - Fully managed Docker registry
   - Stores container images
 - `AWS Fargate` - a serverless compute engine for containers. It works with both Amazon ECS and Amazon EKS. 
@@ -115,3 +115,26 @@
 - `AWS Outposts Family`- a fully managed hybrid cloud solution that extends AWS infrastructure and services to on-premises data centers.
   - It provides a consistent experience between on premises and the AWS Cloud, offering compute, storage, and networking components.
   - _Good for_: Low-latency applications, data processing in remote locations, migrating and modernizing legacy applications, and meeting regulatory compliance or data residency requirements
+
+## Module 4 - Going Global
+- `AWS edge locations` - Edge locations cache items like images, videos, and other resources, so that users can access the content they need with lower latency.
+  - Edge locations offer multiple services to run closer to end users, including AWS networking services like Amazon CloudFront
+- `CloudFormation` - A service that lets you define and provision AWS infrastructure as code using templates.
+- `Infrastructure as code (IAC)` - the practice of managing and provisioning infrastructure using code and automation instead of manual processes.
+- `Key consideration when choosing Regions`
+  1. Compliance - Different geographical locations have varying regulatory requirements and data protection laws that organizations must follow.
+  2. Proximity - Regions closer to your user base minimize data travel time, which reduces latency and enhances application responsiveness.
+  3. Features - AWS is constantly expanding features and services to multiple locations, but not all Regions contain all AWS offerings.
+  4. Pricing - Some Regions have lower operational costs than others. These operational costs can impact the overall expenses for hosting applications and services.
+- `Multi-Region and Multi-AZ` - deploying your cloud resources to multiple Regions and multiple Availability Zones
+  - High availability: High availability refers to the capability of a system to operate continuously without failing
+  - Agility: Agility refers to the ability to quickly adapt to changing requirements or market conditions.
+  - Elasticity: Elasticity refers to the ability of a system to scale resources up or down automatically in response to changes in demand.
+- `Amazon Cloudfront` - a content delivery network 
+- `Content Delivery Network` - A distributed network of servers that delivers content to users from the closest location for faster performance and lower latency.
+- `Route 53` - Domain name system (DNS)
+- `Outpost` - Make it possible to run AWS services on-prem
+- `Key elements of AWS Global Infrastructure`
+  - Regions - Each Region consists of multiple, isolated locations known as Availability Zones. Each Region has three or more Availability Zones.
+  - Availability Zone - Are distinct locations within a Region, each designed as an independent zone with its own power, networking, and connectivity.
+  - Edge Locations - are strategically placed sites around the world that cache content to deliver data, video, and applications with lower latency and higher transfer speeds.

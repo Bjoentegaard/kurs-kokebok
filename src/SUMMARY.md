@@ -4,3 +4,4 @@
   - [Module 1 - Quiz](aws-cloud-practtitioner-essentials/module01-quiz.md)
   - [Module 2 - Quiz](aws-cloud-practtitioner-essentials/module02-quiz.md)
   - [Module 3 - Quiz](aws-cloud-practtitioner-essentials/module03-quiz.md)
+  - [Module 4 - Quiz](aws-cloud-practtitioner-essentials/module04-quiz.md)
