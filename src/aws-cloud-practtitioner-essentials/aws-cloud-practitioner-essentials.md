@@ -18,6 +18,10 @@
 - `Shared responsibilites` - Varies by service
 - `AWS Responsibilities` - Security OF the cloud (hardware, infrastructure)
 
+### Recap
+
+In this section of the training, you learned fundamental concepts of cloud computing. You explored the definition and benefits of the cloud, and you were introduced to AWS Global Infrastructure. You also explored the AWS Shared Responsibility Model to clarify the division of responsibilities between AWS and customers.
+
 ## Module 2 - Compute in the cloud
 - `Compute in the cloud` - Compute in the cloud means creating virtual machines with a cloud provider to run applications and tasks over the internet
 - `Elastic Compute Cloud (EC2)` - Virtual Server/Machine in the AWS Cloud that provides on-demand, scalable computing capacity
@@ -75,6 +79,10 @@
 - `Amazon Simple Notification Service (Amazon SNS)` - A publish-subscribe service that publishers use to send messages to subscribers through SNS topics.
 - `SNS topic` - A channel for messages to be delivered
 
+### Recap
+
+In these lessons about compute, you learned how Amazon EC2 and cloud resources help scale applications. You gained knowledge of EC2 instance types, pricing options, and how to choose the best instance types for your unique business needs. You also became familiar with using AWS tools and services like Elastic Load Balancing, Amazon EC2 Auto Scaling, Amazon SQS, and Amazon SNS to manage traffic and communication.
+
 ## Module 3 - Exploring Compute Service
 - `Unmanaged services` - (EX: EC2) AWS takes care of the underlying physical infrastructure, but you're responsible for setting up, securing, and maintaining the operating system, network configurations, and applications on your instances.
 - `Managed services` - Managed services, on the other hand, reduce the amount of infrastructure you need to manage.
@@ -116,6 +124,9 @@
   - It provides a consistent experience between on premises and the AWS Cloud, offering compute, storage, and networking components.
   - _Good for_: Low-latency applications, data processing in remote locations, migrating and modernizing legacy applications, and meeting regulatory compliance or data residency requirements
 
+### Recap 
+This module gave you a practical understanding of AWS compute services, so you can choose the right tools for your applications. You learned when to use fully managed options like Lambda or Fargate, and when full control with Amazon EC2 made sense. You explored how containers solve deployment consistency issues and how AWS services, like Amazon ECS and Amazon EKS, simplify managing and scaling containerized applications. You also discovered services like Elastic Beanstalk, AWS Batch, Lightsail, and Outposts, and how each supported specific use cases, from basic web hosting to large-scale batch processing or hybrid cloud environments.
+
 ## Module 4 - Going Global
 - `AWS edge locations` - Edge locations cache items like images, videos, and other resources, so that users can access the content they need with lower latency.
   - Edge locations offer multiple services to run closer to end users, including AWS networking services like Amazon CloudFront
@@ -138,6 +149,9 @@
   - Regions - Each Region consists of multiple, isolated locations known as Availability Zones. Each Region has three or more Availability Zones.
   - Availability Zone - Are distinct locations within a Region, each designed as an independent zone with its own power, networking, and connectivity.
   - Edge Locations - are strategically placed sites around the world that cache content to deliver data, video, and applications with lower latency and higher transfer speeds.
+
+### Recap
+In this section of the training, you learned more about the AWS Global Infrastructure. You learned about choosing a Region, the value of edge locations, and how to use services such as CloudFormation to streamline and automate deployment.
 
 ## Module 5 - Networking
 - `Networking` - The term networking refers to interconnected devices that can exchange data and resources.
