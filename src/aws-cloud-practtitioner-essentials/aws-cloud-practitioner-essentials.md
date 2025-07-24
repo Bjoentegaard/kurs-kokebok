@@ -138,3 +138,72 @@
   - Regions - Each Region consists of multiple, isolated locations known as Availability Zones. Each Region has three or more Availability Zones.
   - Availability Zone - Are distinct locations within a Region, each designed as an independent zone with its own power, networking, and connectivity.
   - Edge Locations - are strategically placed sites around the world that cache content to deliver data, video, and applications with lower latency and higher transfer speeds.
+
+## Module 5 - Networking
+- `Networking` - The term networking refers to interconnected devices that can exchange data and resources.
+- `Amazon Virutal Private Cloud (Amazon VPC)` - Lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.
+- `Subnet` - Is a section of a VPC in which you can group resources based on security or operational needs.
+  - Private subnet - Contain resources that should be accessible only through your private network, such as a database that contains customers’ personal information and order histories.
+  - Public subnet - Contain resources that need to be accessible by the public, such as an online store’s website.
+- `Architectural diagrams` - A schematic or map of your network in the AWS Cloud
+  - A picture is worth a thousand words. With a quick glance, you can see if the network was built for redundancy, security, and even scalability. It can also serve as a blueprint so you don't forget important connections when building your solutions.
+- `Internet gateway` - A doorway that is open to the public.
+- `Virtual private gateway` -  it allows you to create a VPN connection between a private network, like your on-premises data center or internal corporate network to your VPC.
+- `AWS Direct Connect` - lets you establish a completely private, dedicated fiber connection from your data center to AWS. It ensures both security and consistent high performance.
+- `Difference between similar network components`
+  - Virtual Private Cloud (VPC) - Is used to establish boundaries around your AWS resources.
+  - Virtual private gateway - Allows protected internet traffic to enter into the VPC.
+  - Virtual private network (VPN) connection - A VPN encrypts your internet traffic, helping protect it from anyone who might try to intercept or monitor it.
+- `AWS Client VPN` - Is a networking service you can use to connect your remote workers and on-premises networks to the cloud. 
+  - It is a fully managed, elastic VPN service that automatically scales up or down based on user demand.
+  - Benefits: AWS Client VPN provides advanced authentication, remote access. It is elastic and fully managed. 
+  - Use case: It can be used to quickly scale remote-worker access.
+- `AWS Site-to-Site VPN` - Creates a secure connection between your data center or branch offices and your AWS Cloud resources.
+  - No dedicated hardware link (unlike AWS Direct Connect), which makes it cost-effective.
+  - Benefits: Site-to-Site VPN provides high availability, secure and private sessions, and accelerates applications. 
+  - Use cases: It can be used for application migration and secure communication between remote locations.
+- `AWS PrivateLink` - Is a highly available, scalable technology that you can use to privately connect your VPC to services and resources as if they were in your VPC.
+  - Benefits: AWS PrivateLink helps you secure your traffic and connect with simplified management rules.
+  - Use case: It is used for connecting your clients in your VPC to resources, other VPCs, and endpoints.
+  - _Traffic jams are possible because you’re using the same connection as other clients._
+- `AWS Direct Connect` - Is a service that makes it possible for you to establish a dedicated private connection between your network and VPC in the AWS Cloud.
+  - Benefits: AWS Direct Connect reduces network costs and increases amount of bandwidth.
+  - Latency-sensitive applications - Direct Connect bypasses the internet and provides a consistent, low-latency network experience.
+  - Large-scale data migration or transfer - Direct Connect helps ensure smooth and reliable data transfers at massive scale for real-time analysis, rapid data backup, or broadcast media processing.
+  - Hybrid cloud architectures - You can use Direct Connect to link your AWS and on-premises networks to build applications that span environments without compromising performance.
+- `Additional gateway services`
+  - AWS Transit Gateway - Is used to connect your Amazon VPCs and on-premises networks through a central hub.
+  - Network Address Translation (NAT) Gateway - You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services can't initiate a connection with those instances.
+  - Amazon API (Application Programming Interface) Gateway - An API defines how different software systems can interact and communicate with each other. The Amazon API Gateway is an AWS service for creating, publishing, maintaining, monitoring, and securing APIs at any scale.
+- `Security Groups` - Control inbound and outbound traffic at the resource level
+  - Security groups perform stateful packet filtering. They remember previous decisions made for incoming packets.
+  - By default, a security group denies all inbound traffic and allows all outbound traffic.
+  - _Note_: If you have multiple Amazon EC2 instances within the same VPC, you can associate them with the same security group or use different security groups for each instance.
+  - **Feature:**
+    - Scope - Instance level (attached to EC2 instances)
+    - State - Stafeul (remember state)
+    - Rule types - Only allow type rules
+    - Return traffic - Return traffic is automatically allowed if inbound traffic is allowed
+    - Uses - Fine-grained control of traffic for individual EC2 instances
+- `Network Access Control Lists (ACL)` - Is a virtual firewall that controls inbound and outbound traffic at the subnet level.
+  - ACLs perform stateless packet filtering. They remember nothing and check packets that cross the subnet border each way: inbound and outbound.
+  - Default network ACL in each AWS account allows all inbound/outbound traffic by default; you can modify or create custom ACLs for your VPC.
+  - **Feature:**
+    - Scope - Subnet level (associated with subnets)
+    - State - Steless (don't remember state)
+    - Both allow and deny type rules
+    - Return traffic must be implicitly allowed in both directions
+    - Broad control of traffic in and out of subnets
+- `AWS Shared Responsibility Model` -  Network ACLs and security groups are the customers responsibility
+- `Domain Name System (DNS)` - DNS resolution is the process of translating a domain name to an IP address and vice versa.
+- `Amazon route 53` - Route 53 is a highly available and scalable cloud DNS service.
+  - Latency-based routing
+  - Geolocation DNS
+  - Weighted round-robin
+- `Amazon CloudFront` - CloudFront is a CDN service that delivers your content with low latency and high speeds.
+- `AWS Global Accelerator` - Global Accelerator is a service that uses the AWS global network to improve application availability, performance, and security.
+
+### Recap 
+In this networking module, you identified core networking components and how they connect in the AWS Cloud. We covered the basics of a VPC, the way that you isolate your workload in AWS, gateways, network ACLs, and security groups. You also reviewed ways to connect to AWS through a VPN and Direct Connect, secure connections that are either encrypted over the public internet or exclusive connections used by you and you alone.
+
+You also learned about AWS edge locations, Route 53 for DNS, and CloudFront to cache content closer to consumers.
