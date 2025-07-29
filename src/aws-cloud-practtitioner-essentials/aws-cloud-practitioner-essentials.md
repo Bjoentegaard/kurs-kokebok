@@ -221,3 +221,124 @@ In this section of the training, you learned more about the AWS Global Infrastru
 In this networking module, you identified core networking components and how they connect in the AWS Cloud. We covered the basics of a VPC, the way that you isolate your workload in AWS, gateways, network ACLs, and security groups. You also reviewed ways to connect to AWS through a VPN and Direct Connect, secure connections that are either encrypted over the public internet or exclusive connections used by you and you alone.
 
 You also learned about AWS edge locations, Route 53 for DNS, and CloudFront to cache content closer to consumers.
+
+## Module 6: Storage
+- `Block storage` - Provides persistent, low-latency block-level storage volumes that attach to EC2 instances like physical hard drives.
+  - `Amazon EC2 instance store`- An unmanaged non-persistent, high-performance block storage directly attached to EC2 instances for temporary data.
+    - Is best for temporary memory-based storage needs like buffers, caches, and scratch data. It is not recommended for applications that require data retention.
+    - Automatically available storage - Instance store volumes are temporary, high‑performance block storage physically attached to the host, included at no extra cost on many EC2 instance types and erased when the instance stops.
+    - Cost effective - Is included in the instance price, making it ideal for temporary data like caches or buffers and helping reduce costs for workloads that don’t need persistent storage.´
+    - EC2 instance store provides ultra‑low latency and high I/O performance by being directly attached to the host server, making it ideal for temporary fast‑processing data.
+  - `Amazon Elastic Block Store (EBS)` - A managed service that provides persistent block storage volumes for EC2 instances, offering various types for different workloads
+    - EBS volumes act like external hard drives, offering consistent and low-latency performance for workloads like databases and file systems.
+    - Use cases - Some practical use cases of Amazon EBS include database hosting, backup storage for applications, and rapid deployment of development environments using volume snapshots.
+    - Data migration - EBS volumes can be easily migrated between Availability Zones using snapshots. The snapshots provide a simple way to move data across regions or create copies.
+    - Instance type changes - EBS volumes are separate from EC2 instances, so you can easily attach them to other instance types and change sizes without losing data.
+    - Disaster recovery - EBS snapshots offer reliable, automated backups that can be restored across regions for fast recovery during emergencies.
+    - Cost optimization - EBS volumes can be resized or changed to different types without downtime, letting you match storage to usage needs.
+    - Performance tuning - Amazon EBS provides multiple volume types and adjustable performance to suit varying workload and IOPS requirements.
+- `Object storage` - is a data storage architecture that manages data as objects in a flat address space. 
+  - It offers unlimited scalability so you can store vast amounts of unstructured data without worrying about capacity constraints.
+  - Object storage provides enhanced metadata capabilities to provide more efficient data management, search, and analytics across massive datasets.
+  - **`Amazon Simple Storage Service (S3)` - A fully managed scalable object storage service for storing and retrieving any amount of data from anywhere.**
+    - Store data as objects -> Store object in buckets
+    - Upload a maximum size of 5 TB
+    - Create multiple buckets
+    - Offers features like versioning, lifecycle management, and various storage classes to optimize costs.
+    - Each object typically includes the data itself, metadata, and a unique identifier, or key.
+    - Each Amazon S3 object is uniquely identified within a bucket by its key, which is essentially its file name.
+    - Objects also have properties like version ID, access control information, and user-defined metadata.
+- `File storage` - file storage services provide shared file systems accessible over networks, so multiple users and applications can access the same data simultaneously.
+  - They offer scalability and flexibility so you can expand storage capacity as needs grow without managing physical infrastructure.
+  - `Amazon Elastic File System (EFS)` - A fully managed, scalable NFS file system for use with AWS Cloud services and on-premises resources.
+    - Multiple instances reading and writing simultaneously
+    - EFS is designed to support a wide variety of workloads and can be accessed by multiple EC2 instances simultaneously.
+    - Benefits:
+      - Multi-AZ redundancy - automatically replicates data across multiple Availability Zones in a region for high availability.
+      - Shared access - supports thousands of concurrent NFS connections, so multiple EC2 instances can access the same file system simultaneously.
+      - Elastic storage - automatically grows and shrinks as you add and remove files, with no need to provision or manage storage capacity.
+  - `Amazon FSx` - A fully managed file storage services for popular file systems like Windows, Lustre, and NetApp ONTAP.
+    - Benefits:
+      - File system integration - Supports industry-standard file system protocols, allowing convenient integration with your existing applications, workflows, and development tools.
+      - Managed infrastructure - Reduces the complexity of managing infrastructure while delivering the features and capabilities of traditional file systems.
+      - Scalable storage - Adjusts resources dynamically, eliminating the need for complex capacity planning and manual infrastructure management.
+      - Cost effective - has a pricing model and automated tiering options that optimize costs by charging only for used storage and moving infrequently accessed data to lower-cost tiers.
+- `NFS` - Network File System
+- `AWS Storage Gateway` - A fully managed, hybrid-cloud storage service that provides on-premises access to virtually unlimited cloud storage.
+- `AWS Elastic Disaster Recovery` - A fully managed service that streamlines the recovery of your physical, virtual, and cloud-based servers into AWS.
+- `Amazon EBS Snapshots` - Point-in-time backups of EBS volume. They can be used for disaster recovery, data migration, volume resizing, and for creating consistent backups of production workloads.
+  - EBS snapshots are incremental, so they only save the blocks on the volume that have changed after your most recent snapshot.
+  - Can be used to create multiple new volumes, and new volumes created from a snapshot are an exact copy of the original volume at the time the snapshot was taken.
+  - Snapshots of EBS volumes are stored redundantly in multiple Availability Zones using Amazon S3.
+  - Benefits
+    - Data protection and recovery - Enable fast data recovery from corruption, accidental deletion, or system failures using point-in-time backups.
+    - Operational flexibility - Enable operations like cross-Region data migration, volume resizing, volume cloning, and sharing data across AWS accounts.
+    - Cost effective - Use incremental backup technology, storing only changed blocks after the initial backup, reducing storage costs and backup time.
+- `Amazon Data Lifecycle Manager` - You can automate the creation, retention, and deletion of EBS snapshots using Amazon Data Lifecycle Manager.
+  - Schedule automatic snapshot creation
+  - Set retention policies
+  - Manage snapshot lifecycle
+  - Apply consistent backup policies
+- `AWS S3 Benefits`
+  - Virtually unlimited storage - no fixed storage limit, scaling automatically to accommodate any amount of data you need to store.
+  - Object lifecycle management - lifecycle policies automatically move objects between storage classes based on your defined rules, optimizing costs over time.
+  - Broad range of use cases - supports a wide range of use cases for both cloud-based applications and traditional on-premises workloads. Amazon S3 is commonly used for content distribution, hosting static websites, and delivering media files.
+- `S3 Security and privacy management`
+  - Everything you store in Amazon S3 is private by default
+  - **Bucket policies** - Resource-based policies that can only be attached to S3 buckets. An S3 bucket policy specifies which actions are allowed or denied on the bucket, in addition to every object in that bucket.
+  - **Identity-based policies** - Permissions that control what actions users, groups, or roles can perform on S3 resources are attach directly to identities rather than to the S3 resources themselves
+  - **Encryption** - Provides encryption capabilities to protect data both at rest and in transit.
+- `Amazon S3 storage classes and uses cases`
+  1. `S3 Standard` - General-purpose storage for cloud applications, dynamic websites, content distribution, mobile and gaming applications, and big data analytics
+  2. `S3 Intelligent-Tiering` - This tier is useful if your data has unknown or changing access patterns. Stores objects in three tiers: a frequent, an infrequent, and an archive instant access tier.
+  3. `S3 Standard Infrequent Access (Standard-IA)` - For infrequently accessed data that still needs fast retrieval. Provides the same durability, throughput, and low latency as S3 Standard, but at a lower storage cost with a retrieval fee—ideal for long-term backups and disaster recovery.
+  4. `S3 One Zone Infrequent Acces (One Zone-IA)` - Stores data in a single Availability Zone, reducing costs compared to S3 Standard-IA, which uses three zones.
+  5. `S3 Express One Zone` - It was purpose-built to deliver consistent single-digit millisecond data access for your most frequently accessed data and latency-sensitive applications. Delivers data access speed up to 10x faster and request costs up to 80% lower than S3 Standard.
+  6. `S3 Glacier Instant Retrieval` - Archiving data that is rarely accessed and requires millisecond retrieval.
+  7. `S3 Glacier Flexible Retrieval` - Offers low-cost storage for archived data that is accessed 1–2 times per year. With S3 Glacier Flexible Retrieval, your data can be accessed in as little as 1–5 minutes using an expedited retrieval.
+  8. `S3 Glacier Deep Archive` - is S3’s lowest-cost storage class, built for long-term retention (7–10+ years) and regulatory compliance. Ideal for rarely accessed data—retrieval takes about 12 hours—such as archives in finance, healthcare, or public sectors.
+  9. `S3 Outpost` - Delivers object storage to your on-premises AWS Outposts environment using Amazon S3 APIs and features, and serves workloads with local data residency requirements.
+- `S3 Lifecycle` - Automating object storage tier config
+  - _Transition actions_: define when objects should transition to another storage class.
+  - _Expiration actions_: define when objects expire and should be permanently deleted.
+  - Use cases
+    - _Periodic logs_: If you upload periodic logs to a bucket, your application might need them for a week or a month. After that, you might want to delete them.
+    - _Data that changes in access frequency_: Some documents are frequently accessed for a limited period of time. After that, they are infrequently accessed. At some point, you might not need real-time access to them.
+- `Amazon EFS storage classes`
+  - Standard Storage Classes - Offer Multi-AZ resilience and the highest levels of durability and availability.
+  - One Zone Storage Classes - Provide additional savings by saving your data in a single Availability Zone.
+  - Archive Storage Class - Is cost-optimized for data that is accessed only a few times a year or less and that does not need the sub-millisecond latencies of EFS Standard.
+- `EFS Lifecycle` - You can create lifecycle policies that determine when and how files transition between different storage tiers.
+  - Transition to IA - This policy instructs lifecycle management when to move files into the Infrequent Access storage, which is cost-optimized for data that is accessed only a few times each quarter.
+  - Transition to Archive - This policy instructs lifecycle management when to move files into the Archive storage class, which is cost-optimized for data that is accessed only a few times each year or less.
+  - Transition to Standard - This policy instructs lifecycle management whether to transition files out of IA or Archive and back into Standard storage when the files are accessed in the IA or Archive storage.
+- `Amazon FSx file systems`
+  - Windows File Server
+  - NetApp ONTAP
+  - OpenZFS
+  - Lustre
+- `AWS Storage Gateway` - Is a hybrid cloud storage service that makes it possible to seamlessly integrate on-premises environments with AWS Cloud storage.
+  - Benefits
+    - Seamless integration
+    - Improved data management
+    - Local caching
+    - Cost optimization
+- `Gateway types` - offers three distinct types of gateways to meet different hybrid storage needs
+  - Amazon S3 File Gateway - Bridges your local environment with Amazon S3. It provides on-premises applications with access to virtually unlimited cloud storage through familiar file protocols.
+  - Volume Gateway - Lets you create virtual storage volumes with local access, bridging on-premises infrastructure and AWS Cloud by presenting cloud data as iSCSI volumes.
+  - Tape Gateway - Makes it possible to replace physical tape infrastructure with virtual tape capabilities while benefitting from the durability and scalability of AWS Cloud storage.
+- `Elastic Disaster Recovery` - replicates critical workloads to AWS with minimal downtime. Your servers' block-level data is continuously replicated to AWS, making it ideal for uses that require robust disaster recovery solutions.
+  - Supports both physical and virtual servers
+  - Benefits:
+    - Business resilience - Maintain business operations with continuous block-level data replication and the ability to recover workloads within minutes during disruptions.
+    - Streamlined disaster recovery - Automate disaster recovery processes through an intuitive console, reducing complex manual configurations and minimizing the risk of human error.
+    - Cost optimization - Eliminate expensive secondary data centers and pay only for what you use, with minimal upfront investment and no standby infrastructure costs.
+  - Use cases
+    - Healthcare data protection
+    - Financial services continuity
+    - Manufacturing operations recovery
+
+### Recap
+In this module, you learned about the diverse storage options available in AWS, starting with block storage services like Amazon EC2 Instance Store and Amazon EBS. You learned how Amazon EBS provides persistent block storage volumes for EC2 instances, while EC2 instance store offers temporary block-level storage. You learned how to use EBS snapshots and AWS Data Lifecycle Manager for automated backup management and data protection.
+
+You then examined Amazon S3, a highly scalable object storage service that serves as a foundation for many cloud storage needs. You delved into file storage solutions, including Amazon Elastic File System (Amazon EFS) for Linux-based workloads and Amazon FSx for Windows, Lustre, OpenZFS, and NetAPP ONTAP file systems. Finally, you learned about AWS Storage Gateway, which bridges on-premises environments with AWS storage services to enable hybrid cloud storage architectures.
