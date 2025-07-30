@@ -342,3 +342,72 @@ You also learned about AWS edge locations, Route 53 for DNS, and CloudFront to c
 In this module, you learned about the diverse storage options available in AWS, starting with block storage services like Amazon EC2 Instance Store and Amazon EBS. You learned how Amazon EBS provides persistent block storage volumes for EC2 instances, while EC2 instance store offers temporary block-level storage. You learned how to use EBS snapshots and AWS Data Lifecycle Manager for automated backup management and data protection.
 
 You then examined Amazon S3, a highly scalable object storage service that serves as a foundation for many cloud storage needs. You delved into file storage solutions, including Amazon Elastic File System (Amazon EFS) for Linux-based workloads and Amazon FSx for Windows, Lustre, OpenZFS, and NetAPP ONTAP file systems. Finally, you learned about AWS Storage Gateway, which bridges on-premises environments with AWS storage services to enable hybrid cloud storage architectures.
+
+## Module 7: Databases
+- `Relational Databases` - store data in a way that relates it to other pieces of data, and they use structured query language, or SQL, to manage and query data.
+- `Amazon Relational Database Service (Amazons RDS)` - Managed relational database service that handles routine database tasks such as backups, patching, and hardware provisioning.
+  - Supports multiple database instance class types that optimize for memory, performance, or input/output (I/O).
+  - Supports different database engines, including Amazon Aurora, MySQL, PostgreSQL, Microsoft SQL Server, MariaDB, and Oracle Database.
+  - Benefits:
+    - Cost optimization - Eliminates the high upfront costs of purchasing and maintaining database hardware infrastructure. You only pay for the compute and storage resources that you consume through a flexible pay-as-you-go model.
+    - Multi-AZ deployment - Improves database reliability through Multi-AZ deployments. It automatically replicates data to a standby instance in a different Availability Zone.
+    - Perfomance optimization - enhances database performance through automated management of resource allocation, monitoring, and optimization tasks.
+    - Security controls - enhances database security through multiple layers of protection, including VPC isolation as well as encryption at rest and in transit.
+- `AWS Database Migration Service (AWS DMS)` - Helps you migrate databases quickly and securely to AWS with minimal downtime by continuously replicating data during the migration process.
+- `Amazon Aurora` - Managed relational database designed to help reduce unnecessary I/O operations. It's compatible with MySQL and PostgreSQL, provides high performance and availability, and automatically scales alongside your workloads.
+  - High performance and availability - Delivers up to five times the throughput of standard MySQL and three times the throughput of PostgreSQL. It uses a distributed storage system across multiple nodes to provide high performance and availability.
+  - Automated storage and backup management - Automatically grows storage from 10 GB to 128 TB based on your actual data usage, which eliminates guesswork in capacity planning.
+  - Advanced replication and fault tolerance - Replicates data across three Availability Zones with six copies of data, and provides 99.99% availability. It automatically detects database failures and redirects traffic to healthy replicas without data loss.
+- `Querying Relation Data` - Involves retrieving, manipulating, and managing information stored in relational databases.
+  - MySQL
+  - PostgreSQL
+  - Microsoft SQL Server
+- `Structured Query Language (SQL)` - Is a programming language for storing and processing information in a relational database
+- `NoSQL databases` - are sometimes referred to as non-relational databases. Instead of row and column relationships, NoSQL databases build a structure for the data that they contain using key-value pairs instead
+  - With key-value pairs, data is organized into items identified by unique keys.
+- `Amazon DynamoDB` - is a fully managed NoSQL database service that provides fast and predictable performance for both document and key-value data structures.
+  - Data = items = set of attributes
+  - Attribute = name + value
+  - Add/remove attribute any time
+  - Benefits:
+    - Scalability with provisioned capacity - Automatically scales throughput up or down based on actual usage, which ensures consistent performance without manual intervention.
+    - Consistent high perfomance - Delivers single-digit millisecond response times at any scale, which makes it ideal for high-performance applications.
+    - High availability and durability - Delivers 99.999% data availability by replicating data across three distinct facilities within each AWS Region.
+    - Data encryption - Offers comprehensive encryption capabilities to protect information both at rest and in transit. All data is automatically encrypted behind the scenes before being written to the storage layer.
+- `In-memory caches` - Is a high-speed storage layer that temporarily stores frequently accessed data in a computer's main memory, or RAM.
+- `Amazon ElastiCache` - Is a fully managed in-memory caching service that was built to help reduce the complexity of administering in-memory caching systems.
+  - It automatically detects and replaces failed nodes, which makes it ideal for applications that need consistent high performance.
+  - Benefits:
+    - High performance for Redis, Valey, or Memchached instances - simplifies deploying and managing in-memory caches with automated provisioning, patching, monitoring, and seamless scalability.
+    - High availability - Provides high availability by constantly monitoring primary nodes for potential failures.
+    - Replication across multiple AZ - Enables automatic replication across multiple Availability Zones to protect against infrastructure failures.
+    - Data encryption - Supports data encryption mechanisms to safeguard sensitive information throughout its lifecycle. 
+- `There is no one-size-fits-all database for all purposes`
+- `Amazon DocumentDB` - is fully managed service designed to handle semistructured data, which is information that doesn't conform to rigid relational schemas.
+  - is a MongoDB-compatible database, so it manages JSON-like documents with dynamic schemas.
+  - is perfect for applications requiring frequent schema changes and document-oriented data. Unlike relational databases or nonrelational databases, you can quickly iterate without relying on predefined schemas.
+  - Use cases:
+    - Content management systems
+    - Catalog
+    - Inventory management, and user profile and personalization systems.
+  - Benefits:
+    - MongoDB compability - Is fully compatible with MongoDB workloads and supports MongoDB APIs, drivers, and tools.
+    - Performance and scalability - Automatically scales storage up to 64 TB in 10 GB increments based on your application needs.
+    - Increased read throughput - Improves read throughput for high-volume applications by creating up to 15 replica instances that share underlying storage.
+- `AWS Backup` - Streamlines data protection across various AWS resources and on-premises deployments by providing a single dashboard for monitoring and managing backups.
+  - It eliminates the complexity of managing multiple backup strategies by supporting multiple storage types, including Amazon EBS volumes, Amazon EFS file systems, and various databases.
+  - Benefits:
+    - Centralized backup management - Provides a single dashboard to manage backups across multiple AWS services and accounts.
+    - Cross-region backup redundancy - Enables automatic replication of backup data across different AWS Regions for disaster recovery purposes.
+    - Streamlined regulatory compliance - Maintains detailed audit logs and reports to demonstrate compliance with regulatory requirements.
+- `Amazon Neptune` - is a fully managed, purpose-built graph database service that manages highly connected data sets, like those used in social networking applications.
+  - It excels at understanding complex relationships that are difficult to identify in traditional relational databases like user connections, friend networks, and interaction patterns.
+  - Benefits:
+    - Purpose-built for complex relationships - It supports both property graph and resource description framework, or RDF, models making it ideal for relationship mapping and pattern matching applications.
+    - High performance and scalability - Delivers consistent performance at scale, processing billions of relationships in milliseconds. It automatically grows storage up to 64 TB based on your application needs.
+
+### Recap
+In this module, we explored the managed relational database capabilities of Amazon RDS and Amazon Aurora. You learned how AWS DMS facilitates seamless database migrations, and DynamoDB provides insights into NoSQL database solutions for scalable applications.
+
+We covered the in-memory caching capabilities of ElastiCache and the MongoDB-compatible document database features of Amazon DocumentDB. We examined the comprehensive data protection strategy across AWS services offered by AWS Backup. And finally, we concluded with the powerful graph database capabilities of Neptune for complex relationship queries.
+
