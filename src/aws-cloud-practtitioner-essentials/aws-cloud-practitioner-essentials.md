@@ -506,3 +506,61 @@ We covered the in-memory caching capabilities of ElastiCache and the MongoDB-com
 ### Recap
 AI/ML and data analytics are two fields that use high-quality data to analyze past events and innovate for the future. In the previous lessons, you learned how AWS AI/ML solutions help to predict future trends and automate processes. And you learned how AWS solutions can be used to analyze historical trends and develop insights from data.
 
+## Module 9 - Security
+- `Authentication` - Verifying the identity of a user or entity through credentials.
+  - Is the process of verifying the identity of a user or entity through credentials like a username and password combination.
+  - Use case: An employee logs in to an employee portal.
+- `Authorization` - Granting authenticated users with certain access rights and permissions.
+  - Grants users certain access rights and permissions that determine which actions they can perform in a system or application.
+  - Use case: An employee can only access their own employee records inside the employee portal.
+- `Data privacy and protection` - Maintains customer trust and prevents fraud.
+- `AWS security controls` - AWS offers multiple security mechanisms to help protect your cloud resources and achieve the following:
+  - Prevent security incidents through proper permission and access management
+  - Protect networks, application, and data
+  - Detect and respond to security incidents as they occur.
+- `AWS Identity and Access Managemen (IAM)` - Securely manage identities and access to AWS services and resources.
+  - By default, all actions are denied.
+- `Principle of least privilege` - Dictates that you should only give people and systems access to what they need and nothing else.
+- `Root user` - The root user is the account owner and has permission to do anything inside the AWS account.
+- `IAM user` - Represents a person or application that interacts with AWS services and resources. It consists of a name and credentials.
+- `IAM Group` - Is a collection of IAM users. When you assign permissions to a group, all users in the group inherit the permissions.
+- `IAM Roles` - An IAM role is a temporary identity with specific permissions. When assumed, previous permissions are dropped, and the user gains only those of the new role.
+- `IAM policies` - is a JSON document that allows or denies permission to access AWS services and resources. IAM policies can also define the level of access to resources.
+- `Resource` - Which AWS resource the API call is for
+- Additional access management services
+  - `AWS IAM Identity Center` - centralizes identity and access management across AWS accounts and applications
+    - _Federated identity management is a system that allows users to access multiple applications, services, or domains using a single set of credentials._
+  - `AWS Secrets Manager` - provides a secure way to manage, rotate and retrieve database credentials, API keys, and other secrets throughout their lifecycle.
+    - _Secrets are confidential or private information intended to be known only to specific individuals or groups. Examples include passwords, database credentials, and API keys._
+  - `AWS Systems Manager` - provides a centralized view of nodes across your organization's accounts and Regions and multi.cloud and hybrid environments.
+    - _Nodes are connection points in a network, system, or structure._
+- `AWS network and application protection` - automatically protects against low-level, brute-force attacks, such as DDoS, through its built-in infrastructure and network architecture.
+- `AWS protection through infrastructure`
+  - Security groups - only allow in proper request traffic. They operate at the AWS network level so they can shrug off massive attacks using the entire AWS Region's capacity
+  - Elastic Load Balancing (ELB) - handles traffic first before handing it off, so your frontend server is not overwhelmed. Like security groups, it runs at the Region level.
+  - AW Regions - The enormous capacity of Regions makes them extremely difficult to overwhelm.
+- AWS protection through services
+  - `AWS Shield` - designed to automatically protect AWS customers from the most common, frequently occurring types of DDoS attacks at no cost
+  - `AWS WAF` - is a web application firewall that monitors network requests that come into your web applications. When a request comes into AWS WAF, it checks the IP address against a web access control list (web ACL). 
+- `Data Encryption` - Securing data in a way that only authorized parties can access it
+  - Data encryption works like a lock and key mechanism. If you have the right key, you can access the encrypted data.
+  - At rest - The data is idle and not moving, like when it's stored in a database.
+  - At transit - The data is moving between locations, like when it's being sent from a database to an application. SSL/TLS certificates are used to establish encrypted network connections from one system to another.
+- AWS built-in data protection
+  - `Amazon S3` - all new S3 buckets have encryption configured, and all uploaded objects are encrypted at rest.
+  - `Amazon EBS` - EBS volumes and snapshots can be encrypted at rest, including both boot and data volumes of an Amazon EC2 instance.
+  - `Amazon DynamoDB` - Server-side encryption at rest is enabled on all DynamoDB table data using encryption keys stored in AWS Key Management Service (AWS KMS).
+- `AWS Key Management Service (AWS KMS)` - use AWS KMS to create and manage cryptographic keys. These keys can then be used to encrypt and decrypt your data. 
+  - You can also control the use of keys across a wide range of services and in your applications.
+  - _A cryptographic key is a random string of digits used for locking (encrypting) and unlocking (decrypting) data._
+- `Amazon Macie` - you can monitor your sensitive data at rest to make sure it's safe. Macie uses machine learning (ML) and automation to discover sensitive data stored in Amazon S3
+- `AWS Certificate Manager (ACM)` - Centralizes the management of your SSL/TLS certificates that provide data encryption in transit. It can be used to protect various AWS services and your connected on-premises resources.
+  - SSL/TLS certificates are used to establish encrypted network connections from one system to another.
+- Detection and response services
+  - `Amazon Inspector` - Helps improve the security and compliance of applications by running automated security assessments for Amazon EC2 instances, containers, and Lambda functions.
+  - `Amazon GuardDuty` - Provides intelligent threat detection across your infrastructure and resources. GuardDuty identifies threats by continuously monitoring streams of your account metadata and network activity in your environment.
+  - `Amazon Detective` - After a threat has been detected, you can use Amazon Detective to further investigate the root cause. Detective helps you analyze threats with interactive visualizations contained in a unified AWS Management Console view.
+  - `Amazon Security Hub` - Brings multiple security services together into a single place and format. With this service, you can quickly see your security and compliance state in one comprehensive view.
+
+### Recap 
+Building and maintaining a secure environment in the cloud is an important responsibility. AWS shares this responsibility with its customers. In the previous lessons, you learned about important security concepts, mechanisms, and services that help protect your cloud resources.
