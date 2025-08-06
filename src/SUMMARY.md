@@ -10,3 +10,4 @@
   - [Module 7 - Quiz](aws-cloud-practtitioner-essentials/module07-quiz.md)
   - [Module 8 - Quiz](aws-cloud-practtitioner-essentials/module08-quiz.md)
   - [Module 9 - Quiz](aws-cloud-practtitioner-essentials/module09-quiz.md)
+  - [Module 10 - Quiz](aws-cloud-practtitioner-essentials/module10-quiz.md)

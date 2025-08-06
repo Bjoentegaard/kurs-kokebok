@@ -1,4 +1,4 @@
-# Module 1 - Introduction to the Cloud
+# QUIZ Module 1 - Introduction to the Cloud
 
 
 > Q: Which scenario BEST describes how the client-server model works in coffee-shop analogy?

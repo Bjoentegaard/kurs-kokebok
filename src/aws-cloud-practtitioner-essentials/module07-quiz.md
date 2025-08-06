@@ -1,4 +1,4 @@
-# Module 7 - Databases
+# QUIZ Module 7 - Databases
 
 > Q: AnyCompany Logistics is growing and expanding their online platform. The development team must choose between two database options. They can host their own database on an Amazon EC2 instance or use AWS's fully managed database service. The company wants to reduce IT maintenance tasks so their staff can focus more on development work. 
 > 

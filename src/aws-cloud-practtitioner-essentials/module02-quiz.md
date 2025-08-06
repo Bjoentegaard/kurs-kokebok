@@ -1,4 +1,4 @@
-# Module 2 - Compute in the Cloud
+# QUIZ Module 2 - Compute in the Cloud
 
 
 > Q: How does EC2 compare to running servers on premises?

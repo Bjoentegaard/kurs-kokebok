@@ -1,4 +1,4 @@
-# Module 3 - Exploring Compute Service
+# QUIZ Module 3 - Exploring Compute Service
 
 
 > Configure operating system, security patches, and network settings - UNMANAGED

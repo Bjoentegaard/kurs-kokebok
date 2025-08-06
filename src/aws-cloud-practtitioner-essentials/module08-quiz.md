@@ -1,4 +1,4 @@
-# Module 8 - AI/ML and Data Analytics
+# QUIZ Module 8 - AI/ML and Data Analytics
 
 > Q: Machine learning (ML) is a type of AI for training machines to perform complex tasks without explicit instructions. This training process involves finding patterns in vast amounts of historical data. 
 > 
