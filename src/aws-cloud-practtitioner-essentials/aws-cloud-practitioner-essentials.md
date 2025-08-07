@@ -204,7 +204,7 @@ In this section of the training, you learned more about the AWS Global Infrastru
   - Default network ACL in each AWS account allows all inbound/outbound traffic by default; you can modify or create custom ACLs for your VPC.
   - **Feature:**
     - Scope - Subnet level (associated with subnets)
-    - State - Steless (don't remember state)
+    - State - Stateless (don't remember state)
     - Both allow and deny type rules
     - Return traffic must be implicitly allowed in both directions
     - Broad control of traffic in and out of subnets
