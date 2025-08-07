@@ -647,3 +647,78 @@ Building and maintaining a secure environment in the cloud is an important respo
 ### Recap 
 In this module, you learned the progression of securing, monitoring, auditing, compliance, and governance in the AWS Cloud. You identified services that aid in monitoring with metrics, alarms, and dashboards. You also learned about services for auditing, such as CloudTrail, and compliance, such as AWS Artifact. You reviewed several other governance and compliance services and identified the role of AWS Trusted Advisor in continuously evaluating for cost, security, performance, and more.
 
+## Module 11 - Pricing and Support
+
+- `Pay as you go` - you can adapt to changing business needs and reduce the risk of overprovisioning or missing
+  capacity.
+- `Save when you commit` - For certain services, such as Compute services on AWS, Savings Plans offer savings over
+  On-Demand prices when you commit to a 1-year or 3-year plan.
+- `Pay less by using more` - you can realize important savings as your usage increases. For some services, pricing is
+  tiered, meaning the more you use, the less you pay.
+- `Driving factors of cost`
+  - **Compute** - you pay by a certain span of time, like by the hour or by the second. Unless you've made a
+    reservation for which the cost is agreed upon beforehand, you pay from the time you launch a resource until the
+    time you stop the instance.
+  - **Storage** - You can choose from a broad portfolio of storage solutions with deep functionality for storing, accessing, protecting, and analyzing data. Pricing for storage largely depends on how much storage you have provisioned or how much you are using.
+    - S3 six cost components when storing and managing customer data
+        - Storage pricing
+        - Request and data retrievel pricing
+        - Data transfer and trasfer acceleration pricing
+        - Data management and analytics pricing
+        - Replication pricing
+        - The price to process your data with Amazon S3 Object Lambda
+  - **Data transfer** - In most cases, there is no charge for inbound data transfer or for data transfer between AWS services within the same Region. There are some exceptions, so be sure to verify data transfer rates before beginning.
+    - _Outbound data transfer_ is aggregated across services and then charged at the outbound data transfer rate. The more data you transfer, the less you pay per gigabyte. For data storage and transfer, you typically pay per gigabyte.
+- `AWS pricing and billing services` - These services are purpose-built to help you forecast, track, manage, and view your AWS costs.
+  - `AWS Organizations` - apply security policies at the account level and consolidate billing with multiple accounts using a single payment method.
+  - `AWS Billing and Cost Management dashboard` - centralizes cost management, showing current charges, usage, forecasts, and detailed breakdowns. It also provides tools to manage payments, view invoices, set budgets, and consolidate billing.
+    - Use helpful visualizations and billing reports of monthly AWS spend. 
+    - Set up and manage payment methods.
+  - `AWS Budgets` - helps set custom budgets and sends alerts when costs, usage, or Savings Plans and Reserved Instances (RIs) utilization or coverage exceed defined thresholds.
+    - Set up alerts for when projected costs exceed predefined thresholds. 
+    - Forecast future expenses based on current usage trends.
+  - `AWS Cost Explorer` - helps visualize, analyze, and manage AWS costs and usage with interactive graphs, reports, and forecasts. It provides insights into spending patterns, trends, and Reserved Instance recommendations.
+    - Analyze historical spending trends to identify cost-saving opportunities.
+    - Forecast future AWS costs based on current usage patterns to budget effectively
+  - `AWS Pricing Calculator` - is a web-based planning tool that you can use to create estimates. You input specific configurations such as instance types, storage options, and data transfer volumes.
+    - Estimate potential costs before deployment.
+    - Compare costs of different AWS services and configurations.
+- `Basic Support` - Basic plan included for all AWS customers
+  - Access to documentation, whitepapers, and AWS re:Post
+  - Core AWS Trusted Advisor checks
+- `Developer Support` - For experimenting or testing in AWS
+  - Response times: `< 24 hours` for general guidance and `< 12 hours` when system impaired
+  - Core AWS Trusted Advisor checks
+  - Not Technical Account Management (TAM)
+- `Business Support` - Minimum recommended tier for production workloads.
+  - Response times: Includes previous plan response times, `< 4 hours` when production system impaired and `< 1 hours` when production system is down.
+  - Full set of AWS Trusted Advisor checks
+  - No TAM
+- `Enterprise On-Ramp Support` - For production and business-critical workloads needing proactive guidance.
+  - Response times: Includes previous plan response times, `< 30 minutes` when business-critical system is down
+  - Full set of AWS Trusted Advisor checks
+  - Pool of TAMs provide proactive guidance
+- `Enterprise Support` - For business and mission-critical workloads requiring highest level of support
+  - Response times: Includes previous plan response times, `< 15 minutes` when business- or mission-critical system is down
+  - Full set of AWS Trusted Advisor checks with prioritized recommendations by AWS account team
+  - Dedicated TAM provides consultative architectural an operation guidance
+- `Techinal account manager (TAM)` - included with the Enterprise On-Ramp and Enterprise Support plans. The TAM serves as your primary AWS contact, offering expert guidance on using AWS services, optimizing architectures, managing costs, and connecting you with AWS programs and experts.
+- `Additional resource for your cloud journey` - AWS also provides access to other teams, resources, and documentation that you can use to support your cloud journey.
+    - `AWS re:Post` - A community-driven, question-and-answer platform where users can seek help, share knowledge, and find solutions related to AWS services and technologies.
+    - `AWS Trust and Safety Center` - Provides information on how to report activity or content on AWS that you suspect is abusive.
+    - `AWS Solutions Architects` - Provide architectural guidance, best practice recommendations, and help in designing scalable and secure applications.
+    - `AWS Professional Services` - A consulting service that offers deeper, project-based support. They help with complex migrations, security audits, performance tuning, and more.
+    - `Self-Support at AWS` - Provides extensive documentation and self-support resources that you can use to research, answer a question, or troubleshoot an issue.
+- `AWS Marketplace` - A digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.
+  - Solutions and services offered in the AWS Marketplace include the following:
+    - Software as a service (SaaS) - Business applications such as project management tools
+    - Machine learning (ML) and AI - Prebuilt models for image recognition, natural language processing, and more
+    - Data and analytics - Business intelligence platforms for visualization and reporting
+- `AWS Partner Network (APN)` - a global community that uses AWS technologies, programs, expertise, and tools to build solutions and services for customers. Together, partners and AWS provide innovative solutions, solve technical challenges, and deliver customer value.
+  - Benefits of becoming a partner
+    - Funding benefits: As businesses join the AWS Partner Network and participate in specific programs available to AWS Partners, they can unlock various funding benefits to help build, market, and sell with AWS.
+    - AWS Partner events: AWS Partner events include webinars, virtual workshops, and in-person learning opportunities.
+    - AWS Partner Training and Certification: Take advantage of unique, partner-centered offerings from AWS Training and Certification.
+
+### Recap
+In the last few lessons, you learned about AWS pricing concepts and AWS support options. You covered fundamental pricing concepts and services. You also learned the difference between AWS Support Plans and other technical assistance resources. Finally, you applied these concepts to a real-world application by thinking about how to optimize for cost in the AWS Cloud.
