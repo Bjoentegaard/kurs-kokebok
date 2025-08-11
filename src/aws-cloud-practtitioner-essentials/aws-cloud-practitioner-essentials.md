@@ -822,3 +822,40 @@ In the last few lessons, you learned about AWS pricing concepts and AWS support 
 
 ### Recap
 In this migration module, you identified the AWS Cloud Adoption Framework (AWS CAF), the seven migration strategies, and migration services to migrate applications, databases, and data.
+
+## Module 13 - Well-Architected Solutions
+- Development services - help developers automate CI/CD pipelines, monitor and debug applications, build GraphQL APIs, and deploy web and mobile applications on AWS.
+  - `AWS CodeBuild` - fully managed continuous integration service that compiles source code, runs tests, and produces software packages for deployment. It automatically scales to meet demand, and you only pay for the build time that you use.
+  - `AWS CodePipeline` - Fully managed CI/CD service that automates the build, test, and deploy phases of your release process.
+  - `AWS X-ray` - A Powerful tracing, debugging and performance analysis tool that helps developers visualize application behaviour.
+  - `AWS Appsync` - A fully managed GraphQL service. With Appsync, developers can create a single GraphQL API that can securely access, manipulate, and combine data from multiple data source
+  - `AWS Amplify` - Helps you streamline the process of developing, deploying, and managing secure and scalable full-stack applications on AWS. 
+- Business application services - These services are ideal for managing business application needs such as customer service operations and email promotions.
+  - `Amazon Connect` - AI-powered contact center service to efficiently set up and operate a scalable customer service call center.
+  - `Amazon Simple Email Service (Amazon SES)` - A scalable and cost-effective email service provider that can be integrated into any application for reliable, high-volume email automation.
+- End-user computing services - IT departments often need to provide remote access to resources like virtual desktops and applications.
+  - `Amazon Appstream 2.0` - A fully managed service that streams applications from the cloud directly to any compatible device
+  - `Amazon WorkSpaces` - A fully managed cloud-based desktop computing service. employees can securely access their work environment from any device with an internet connection.
+  - `Amazon WorkSpaces Secure Browser (formerly Amazon WorkSpaces Web)` - A fully managed remote enterprise browser. It provides a protected environment for employees to access private websites, SaaS applications, and the public internet.
+- IoT service (Internet of Things) - a network of connected physical devices embedded with sensors and software that collect and exchange data over the internet.
+  - `AWS IoT Core` - A managed cloud service used to securely connect physical devices with cloud applications.
+    - It helps you create efficient IoT solutions by streamlining the complex process of ingesting, processing, and acting on device data.
+- `Well-Arcchitected Framwork Pillars`
+  1. Operational Excellence - Focus on operations, monitoring, automation, and continuous improvement
+  2. Security - Protects systems and data through best practices like least privilege and data integrity.
+  3. Reliability - Emphasizes recovery planning and system adaptability to meet changing demands
+  4. Performance Efficiency - Encourages using the right resources for the job and adjusting as needs evolve
+  5. Cost Optimization - Helps control and reduce costs through smart provisioning and resource management
+  6. Sustainability - Promotes energy-efficient design and environmentally conscious resource usage
+- `AWS Well-Architected Tool (AWS WA Tool)` - A free service that helps assess and improve cloud workloads based on the six key pillars.
+  - It offers workload reviews, milestone tracking, and custom lenses for tailored evaluations and improvement plans.
+- `Example of enhancement`
+  - Operational Excellence - EC2 Auto Scaling
+  - Security - Strengthening encryption and IAM policies
+  - Reliability - Amazon CloudWatch
+  - Performance Efficiency - AWS Compute Optimizer
+  - Cost Optimization - Savings Plans, AWS Budgets, AWS Cost Explorer
+  - Sustainability - AWS Cost & Usage Report
+
+### Recap
+In this module, you explored AWS purpose-built services for development, business, and customer support. You examined the AWS Well-Architected Framework and learned about its six pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability. You also discovered how the AWS Well-Architected Tool helps assess and enhance workloads, so you can align with best practices. Finally, you learned about serverless architectures, highlighting how services like API Gateway, Lambda, and DynamoDB provide scalable, efficient solutions with minimal infrastructure.
