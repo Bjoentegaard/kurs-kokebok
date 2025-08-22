@@ -14,3 +14,4 @@
   - [Module 11 - Quiz](aws-cloud-practtitioner-essentials/module11-quiz.md)
   - [Module 12 - Quiz](aws-cloud-practtitioner-essentials/module12-quiz.md)
   - [Module 13 - Quiz](aws-cloud-practtitioner-essentials/module13-quiz.md)
+- [UDEMY CLF-C02](udemy-CLF-C02/CLF-C02.md)
