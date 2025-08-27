@@ -90,3 +90,26 @@
 > 
 > A: Run analytics on stolen content
 
+
+
+
+# Section 4: IAM - Identity and Access Management
+
+## IAM Introduction: Users, Groups, Policies
+- IAM stands for `Identity and Access Management` and is a global AWS service for managing users and groups.
+- The root user is created by default and should only be used for initial account setup, not for daily use or sharing.
+- Users represent individual people in an organization and can be grouped logically; groups contain only users, not other groups.
+- Permissions are assigned to users or groups via `JSON policy documents` following the `least privilege principle` to ensure security and cost control.
+
+## IAM Users & Groups
+- IAM is a global AWS service without region selection.
+- Root user access is not recommended; create IAM users for safer account management.
+- Users can be grouped to manage permissions efficiently.
+- Customizing the AWS sign-in URL with an account alias simplifies access.
+
+## IAM Policies
+- IAM policies can be attached at different levels: `groups`, `users (inline policies)`, and `multiple groups`.
+- Users inherit policies from all groups they belong to, combining permissions.
+- IAM policy structure includes version, ID, and statements with key elements: Sid, Effect, Principal, Action, Resource, and optional Condition.
+- Understanding Effect, Principal, Action, and Resource is essential for managing AWS permissions effectively.
+
